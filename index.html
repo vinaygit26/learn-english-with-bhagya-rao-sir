@@ -145,6 +145,33 @@
   .about-inner p{ line-height:1.75; font-size:1.05rem; color:#EDE6D2; margin-bottom:14px; }
   .quote-mark{ font-family:'Caveat'; font-size:2.2rem; color:var(--marigold); }
 
+  /* ---------- SPOKEN ENGLISH PROGRAM ---------- */
+  .program-block{
+    background:var(--paper-dark); border-radius:24px; padding:48px 6vw; margin:0 0 48px;
+  }
+  .program-grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:24px; margin-top:8px;
+  }
+  .program-card{
+    background:var(--cream-card); border-radius:16px; padding:26px 24px;
+    box-shadow:0 8px 18px rgba(47,74,62,0.08);
+    border-left:5px solid var(--marigold);
+  }
+  .program-card:nth-child(2){ border-left-color:var(--sky); }
+  .program-card:nth-child(3){ border-left-color:var(--chalk-green-light); }
+  .program-card:nth-child(4){ border-left-color:var(--coral); }
+  .program-card .icon-wrap{ width:52px; height:52px; margin-bottom:14px; }
+  .program-card h3{ font-size:1.08rem; color:var(--chalk-green); margin-bottom:8px; }
+  .program-card p{ font-size:0.92rem; color:var(--ink-soft); line-height:1.55; margin:0; }
+  .program-note{
+    display:flex; gap:28px; flex-wrap:wrap; justify-content:center;
+    margin-top:34px; padding-top:28px; border-top:2px dashed rgba(47,74,62,0.2);
+  }
+  .program-note-item{ text-align:center; }
+  .program-note-item .label{ font-family:'Baloo 2'; font-weight:700; color:var(--chalk-green); font-size:0.95rem; }
+  .program-note-item .value{ color:var(--ink-soft); font-size:0.9rem; margin-top:2px; }
+  .program-cta{ text-align:center; margin-top:6px; color:var(--ink-soft); font-family:'Caveat'; font-size:1.3rem; }
+
   /* ---------- CONTACT CTA ---------- */
   .contact-cta{
     background:var(--cream-card);
@@ -295,8 +322,23 @@
         <h2>A little about me</h2>
         <p>I spent 35 years teaching English in government schools, retiring as an English School Assistant in 2017. Along the way I served as a District Resource Person and coordinated the District English Mobile Team — always looking for new ways to make grammar feel less like a rulebook and more like a game.</p>
         <p>After retiring, I was honoured with the District Best Teacher Award, worked as a Panel Inspector observing English classrooms, and I currently teach English to children, students, employees, job seekers, and learning enthusiasts. I even composed songs to help children remember English poems!</p>
-        <p>These lessons are the same ones I've taught with chalk and notebook for decades — now written down any child can learn, click by click...</p>
+        <p>These lessons are the same ones I've taught with chalk and notebook for decades — now written down so any child can learn, click by click.</p>
       </div>
+    </div>
+
+    <div class="program-block" id="spoken-english">
+      <div class="section-head" style="margin-bottom:28px;">
+        <span class="eyebrow accent-font">Beyond the website</span>
+        <h2>Spoken English Classes</h2>
+        <p>Live classes with Bhagya Rao Sir, tailored to who you are and what you need.</p>
+      </div>
+      <div class="program-grid" id="program-grid"></div>
+      <div class="program-note">
+        <div class="program-note-item"><div class="label">⏰ Timings</div><div class="value">Choose your convenient time</div></div>
+        <div class="program-note-item"><div class="label">📅 Daily</div><div class="value">Two hours</div></div>
+        <div class="program-note-item"><div class="label">🗓️ Duration</div><div class="value">One month</div></div>
+      </div>
+      <p class="program-cta">Please forward it to the needy… 🙂</p>
     </div>
 
     <div class="contact-cta">
@@ -369,8 +411,12 @@ const icons = {
   chat: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v9H9l-4 3v-3H4z" fill="#3C5F4F"/><circle cx="8" cy="10.5" r="1" fill="#FBF3E3"/><circle cx="12" cy="10.5" r="1" fill="#FBF3E3"/><circle cx="16" cy="10.5" r="1" fill="#FBF3E3"/></svg>`,
   paint: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="4" rx="1" fill="#C0453A"/><rect x="5" y="8" width="14" height="12" rx="2" fill="#5B8C9E"/><circle cx="12" cy="14" r="3" fill="#E8A33D"/></svg>`,
   sun: `<svg width="34" height="34" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#E8A33D"/><g stroke="#E8A33D" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></g></svg>`,
+  grad: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M12 4 2 9l10 5 10-5-10-5z" fill="#5B8C9E"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" stroke="#2F4A3E" stroke-width="1.4" fill="none"/><path d="M21 9v6" stroke="#2F4A3E" stroke-width="1.4" stroke-linecap="round"/></svg>`,
+  home: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M4 11 12 4l8 7" stroke="#C0453A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M6 10v9h12v-9" fill="#E8A33D"/><rect x="10.5" y="14" width="3" height="5" fill="#FBF3E3"/></svg>`,
+  chalkboard: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="1.5" fill="#3C5F4F"/><path d="M7 9h6M7 12h9" stroke="#FBF3E3" stroke-width="1.2" stroke-linecap="round"/><path d="M9 19l3-3 3 3" stroke="#2B2B2E" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>`,
+  trophy: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none"><path d="M7 4h10v5a5 5 0 0 1-10 0V4z" fill="#E8A33D"/><path d="M7 5H4v2a4 4 0 0 0 4 4M17 5h3v2a4 4 0 0 1-4 4" stroke="#C0453A" stroke-width="1.4" fill="none" stroke-linecap="round"/><rect x="10" y="14" width="4" height="4" fill="#C0453A"/><rect x="8" y="18" width="8" height="2" rx="1" fill="#2F4A3E"/></svg>`,
 };
-const bgFor = { apple:'#FBEAE8', dog:'#FCEFDA', book:'#E7F0F2', ball:'#FBEAE8', clock:'#E7F0F2', run:'#EAF0EC', wave:'#FCEFDA', chat:'#EAF0EC', paint:'#E7F0F2', sun:'#FCEFDA' };
+const bgFor = { apple:'#FBEAE8', dog:'#FCEFDA', book:'#E7F0F2', ball:'#FBEAE8', clock:'#E7F0F2', run:'#EAF0EC', wave:'#FCEFDA', chat:'#EAF0EC', paint:'#E7F0F2', sun:'#FCEFDA', grad:'#E7F0F2', home:'#FCEFDA', chalkboard:'#EAF0EC', trophy:'#FCEFDA' };
 
 function iconWrap(name, size){
   const s = size || 64;
@@ -509,6 +555,21 @@ function cardHTML(lesson, index){
 }
 document.getElementById('lessons-grid').innerHTML = lessons.map(cardHTML).join('');
 document.getElementById('home-lesson-grid').innerHTML = lessons.slice(0,4).map(cardHTML).join('');
+
+/* ---------------- SPOKEN ENGLISH PROGRAM ---------------- */
+const programs = [
+  { icon:'grad', title:'For Students', text:'Spoken English, Grammar, and Reading & Writing skills — including Telugu & Hindi.' },
+  { icon:'home', title:'For House-Wives & Elders', text:'Spoken English with Reading & Writing skills. Separate classes for house-wives.' },
+  { icon:'chalkboard', title:'For Teachers', text:'Spoken English with teaching techniques, covering Reading & Writing skills.' },
+  { icon:'trophy', title:'For Competitors', text:'Grammar and Composition, along with Spoken English.' },
+];
+document.getElementById('program-grid').innerHTML = programs.map(p => `
+  <div class="program-card">
+    ${iconWrap(p.icon, 52)}
+    <h3>${p.title}</h3>
+    <p>${p.text}</p>
+  </div>
+`).join('');
 
 /* ---------------- NAVIGATION ---------------- */
 function showView(name){
